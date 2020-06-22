@@ -25,6 +25,9 @@
     <Compile Include="AlphaVeDataSrc.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GraphGenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonBoty.py" />
     <Compile Include="Setup.py">
       <SubType>Code</SubType>
