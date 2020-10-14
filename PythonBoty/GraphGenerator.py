@@ -37,11 +37,28 @@ class GraphGenerator(object):
         #plt.gcf().autofmt_xdate()   # Beautify the x-labels
    
         #plt.savefig('mpl_finance-apple.png')
-        mpf.plot(dataResult, type = 'candle', style = 'charles',
+      #  mc = mpf.make_marketcolors( mavcolors=['r','g','g'])
+
+        plt.rcParams['figure.figsize'] = [15.0, 15.0]
+        plt.rcParams['figure.dpi'] = 140
+        mc = mpf.make_marketcolors(up='g',down='r')
+
+
+        mvcolors=mpf.make_mpf_style(base_mpl_style='classic' ,marketcolors=mc , mavcolors=['#1f77b4','#ff7f0e','#2ca02c'])
+
+        kwargs = dict(type='candle',mav=(9,20,130),volume=True)
+        #figratio=(11,8),figscale=0.85
+        #output,macd, macdsignal, macdhist
+        apdict = mpf.make_addplot(dataResult['Close'])
+
+
+
+        mpf.plot(dataResult, **kwargs, style =mvcolors,
             title = symbol,
-            ylabel = 'Price ($)',
-            ylabel_lower='Shares \nTraded',
-            volume = True, 
-            mav = (3,6,9), 
-            savefig = imgFile+'.png',datetime_format='%d-%m-%Y')
+            ylabel = 'Precio',
+            ylabel_lower='',
+            savefig = imgFile+'.png',datetime_format='%d-%m-%Y',addplot=apdict)
+        
+
+
 

@@ -28,14 +28,28 @@
     <Compile Include="GraphGenerator.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="models\model.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonBoty.py" />
+    <Compile Include="Service\tickerService.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Setup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Utils.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda3" />
     <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="Service\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
