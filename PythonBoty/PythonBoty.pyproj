@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4a16824-258a-4940-9a46-a59210a49ba8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonBoty.py</StartupFile>
+    <StartupFile>Bot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,16 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AlphaVeDataSrc.py">
+    <Compile Include="Sources\AlphaVeDataSrc.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GraphGenerator.py">
+    <Compile Include="Utils\GraphGenerator.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\model.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PythonBoty.py" />
+    <Compile Include="Bot.py" />
+    <Compile Include="Service\ejecucionService.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Service\tickerService.py">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="Sources\" />
     <Folder Include="Service\" />
     <Folder Include="Utils\" />
   </ItemGroup>
