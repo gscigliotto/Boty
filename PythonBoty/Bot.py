@@ -87,6 +87,10 @@ def cumpleTendencia(simbolo,precios,mediaRapida,mediaLenta,macd,macdsignal,macdh
         return False
 
 
+
+
+
+#var=setup.Setup().existeDB()
 tickerservice = tickerService()
 dataSource = data.AlphaVeDataSrc()
 

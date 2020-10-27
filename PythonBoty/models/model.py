@@ -83,20 +83,22 @@ class Tarea(Base):
         self.estadoEjecucion = estadoEjecucion
 
 
+def crearModelo():
+    Base.metadata.create_all(engine)
 
-Base.metadata.create_all(engine)
-
-tarea = Tarea('SWING',False) 
-session.add(tarea)
-
-
-
-symbols = ['GGAL','YPF','BMA','PAM','LOMA','SUPV','BBAR','EDN','CEPU','CRESY','TEO','TGS','IRS','IRCP','TS','AAPL','KO','GOLD','INTC','AMZN','TSLA','MSFT','DIS','WMT','BABA','BBD','DESP','GOOGL','AUY','MELI','FB','XOM','PBR','GE','VALE','BAC','GLOB','CSCO','BA','NFLX','MCD','JPM','JNJ','C','AXP','GILD','IBM','MMM','AIG','RDS.B','CVX','LMT']
-for ticket in symbols:
-    tickerAlta = Ticker(ticket,'')
-    session.add(tickerAlta)
+    tarea = Tarea('SWING',False) 
+    session.add(tarea)
+    symbols = ['GGAL','YPF','BMA','PAM','LOMA','SUPV','BBAR','EDN','CEPU','CRESY','TEO','TGS','IRS','IRCP','TS','AAPL','KO','GOLD','INTC','AMZN','TSLA','MSFT','DIS','WMT','BABA','BBD','DESP','GOOGL','AUY','MELI','FB','XOM','PBR','GE','VALE','BAC','GLOB','CSCO','BA','NFLX','MCD','JPM','JNJ','C','AXP','GILD','IBM','MMM','AIG','RDS.B','CVX','LMT']
+    for ticket in symbols:
+        tickerAlta = Ticker(ticket,'')
+        session.add(tickerAlta)
 
 
+    session.commit()
 
 
-session.commit()
+
+if not parametros.existeDB():
+    crearModelo()
+    
+    

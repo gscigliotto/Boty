@@ -32,8 +32,6 @@ class tickerService(object):
         self.session.add(estado)
         self.session.commit()
 
-
-
     def getTickers(self):
         return self.session.query(Ticker).all()
 

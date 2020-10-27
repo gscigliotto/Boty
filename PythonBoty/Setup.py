@@ -1,4 +1,5 @@
 from sqlalchemy import create_engine
+import os.path
 
 class Setup(object):
 
@@ -21,4 +22,9 @@ class Setup(object):
     def getEngine(self):
         return create_engine('sqlite:///'+self.getDataDBDir(), echo=True)
 
+    def existeDB(self):
+        return os.path.isfile(self.getDataDBDir())
 
+
+
+        
