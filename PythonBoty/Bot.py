@@ -64,6 +64,8 @@ def cumpleTendencia(simbolo,precios,mediaRapida,mediaLenta,macd,macdsignal,macdh
         if ultimosPrecios['close'][i] > precioAnt :
             
             precioCount = precioCount +1
+        else:
+            precioCount = precioCount -1
 
         precioAnt = ultimosPrecios['close'][i]
        
