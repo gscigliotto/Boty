@@ -53,7 +53,7 @@ MarkupSafe==1.1.1
 Mastodon.py==1.5.1
 matplotlib==3.2.2
 mccabe==0.6.1
-mistune==0.8.4
+mistune==2.0.3
 mpl-finance==0.10.1
 mplfinance==0.12.5a3
 multidict==4.7.6
